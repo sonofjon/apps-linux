@@ -13,10 +13,10 @@ sudo apt update && sudo apt upgrade
 ## Emacs
 
 # General
-sudo apt install wslu
-sudo apt install aspell aspell-sv
+sudo apt install aspell aspell-en aspell-sv
 sudo apt install hunspell hunspell-sv
 sudo apt install wamerican
+sudo apt install wslu
 
 # vterm
 sudo apt install cmake
