@@ -26,7 +26,8 @@ sudo apt install libvterm-dev
 # sudo apt install jsonlint
 # sudo apt install chktex
 
-# sudo apt install cargo
+sudo apt install cargo
+cargo install --locked --git https://github.com/latex-lsp/texlab.git
 
 # sudo apt install lua5.4
 # sudo apt install luarocks
