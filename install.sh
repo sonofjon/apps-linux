@@ -16,6 +16,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install wslu
 sudo apt install aspell aspell-sv
 sudo apt install hunspell hunspell-sv
+sudo apt install wamerican
 
 # vterm
 sudo apt install cmake
