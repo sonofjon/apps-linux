@@ -64,7 +64,8 @@ sudo apt install python3-pip
 sudo apt install build-essential
 
 # Emacs (build)
-sudo apt install libgccjit-`gcc -dumpversion`-dev
+# shellcheck disable=SC2046
+sudo apt install libgccjit-$(gcc -dumpversion)-dev
 sudo apt install libtree-sitter-dev
 sudo apt build-dep emacs
 
