@@ -46,6 +46,8 @@ sudo apt install texlive-luatex
 
 sudo apt install ncdu
 # sudo apt install ansible
+sudo apt install mmv
+sudo apt install rename
 # sudo apt install sshpass
 sudo apt install tree
 
