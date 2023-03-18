@@ -1,2 +1,2 @@
 # linux-apps
-My Linux appslications
+My Linux applications
