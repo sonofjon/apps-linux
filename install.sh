@@ -3,7 +3,7 @@
 ### Add sources
 # sudo vim /etc/apt/sources.list  # TODO: do this programatically
 
-### update
+### Update
 
 sudo apt update && sudo apt upgrade
 
@@ -17,6 +17,8 @@ sudo snap install emacs --classic
 
 # General
 sudo apt install xclip
+
+# Spelling
 sudo apt install aspell aspell-en aspell-sv
 sudo apt install hunspell hunspell-sv
 sudo apt install wamerican
@@ -55,7 +57,7 @@ sudo apt install rename
 # sudo apt install sshpass
 sudo apt install tree
 
-### Dev
+### Development
 
 # Node
 # sudo apt install npm
