@@ -30,8 +30,8 @@ sudo apt install libvterm-dev
 sudo apt install python3-demjson
 # sudo apt install chktex
 
-sudo apt install cargo
-cargo install --locked --git https://github.com/latex-lsp/texlab.git
+# sudo apt install cargo
+# cargo install --locked --git https://github.com/latex-lsp/texlab.git
 
 # sudo apt install lua5.4
 # sudo apt install luarocks
@@ -39,11 +39,11 @@ cargo install --locked --git https://github.com/latex-lsp/texlab.git
 
 ## LaTeX
 
-sudo apt install texlive-latex-recommended
-sudo apt install texlive-latex-extra
-sudo apt install texlive-fonts-extra
-sudo apt install texlive-lang-european
-sudo apt install texlive-luatex
+# sudo apt install texlive-latex-recommended
+# sudo apt install texlive-latex-extra
+# sudo apt install texlive-fonts-extra
+# sudo apt install texlive-lang-european
+# sudo apt install texlive-luatex
 # tlmgr stuff
 
 ## Other
