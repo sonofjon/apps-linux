@@ -27,7 +27,7 @@ sudo apt install cmake
 sudo apt install libvterm-dev
 
 # # Linters
-# sudo apt install jsonlint
+sudo apt install python3-demjson
 # sudo apt install chktex
 
 sudo apt install cargo
