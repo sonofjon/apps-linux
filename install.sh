@@ -12,6 +12,9 @@ sudo apt update && sudo apt upgrade
 
 ## Emacs
 
+# App
+sudo snap install emacs --classic
+
 # General
 sudo apt install aspell aspell-en aspell-sv
 sudo apt install hunspell hunspell-sv
