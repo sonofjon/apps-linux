@@ -16,6 +16,7 @@ sudo apt update && sudo apt upgrade
 sudo snap install emacs --classic
 
 # General
+sudo apt install xclip
 sudo apt install aspell aspell-en aspell-sv
 sudo apt install hunspell hunspell-sv
 sudo apt install wamerican
