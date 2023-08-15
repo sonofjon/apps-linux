@@ -57,6 +57,9 @@ sudo apt install rename
 # sudo apt install sshpass
 sudo apt install tree
 
+sudo apt install ocrmypdf
+sudo apt install tesseract-ocr-swe
+
 ### Development
 
 # Node
