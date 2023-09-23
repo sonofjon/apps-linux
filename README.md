@@ -1,2 +1,2 @@
 # linux-apps
-My Linux applications
+My Linux dev environment and programs
