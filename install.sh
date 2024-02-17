@@ -50,9 +50,10 @@ sudo apt install python3-demjson
 
 ## Other
 
-sudo apt install ncdu
 # sudo apt install ansible
+sudo apt install gdu
 sudo apt install mmv
+sudo apt install ncdu
 sudo apt install rename
 # sudo apt install sshpass
 sudo apt install tree
