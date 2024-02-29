@@ -80,6 +80,10 @@ sudo apt install python3-demjson
 # luarocks config lua_version 5.4
 
 ### System
+## Python
+
+# black
+pip install black
 
 ## General
 
