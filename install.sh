@@ -37,17 +37,6 @@ sudo apt install wslu
 sudo apt install cmake
 sudo apt install libvterm-dev
 
-# # Linters
-sudo apt install python3-demjson
-# sudo apt install chktex
-
-# sudo apt install cargo
-# cargo install --locked --git https://github.com/latex-lsp/texlab.git
-
-# sudo apt install lua5.4
-# sudo apt install luarocks
-# luarocks config lua_version 5.4
-
 ## LaTeX
 
 # sudo apt install texlive-latex-recommended
@@ -79,16 +68,16 @@ sudo apt install tesseract-ocr-swe
 # sudo apt install python3
 sudo apt install python3-pip
 
+## Linters
+sudo apt install python3-demjson
+# sudo apt install chktex
 
-### Source
+# sudo apt install cargo
+# cargo install --locked --git https://github.com/latex-lsp/texlab.git
 
-# sudo apt install build-essential
-
-# Emacs (build)
-# shellcheck disable=SC2046
-# sudo apt install libgccjit-$(gcc -dumpversion)-dev
-# sudo apt install libtree-sitter-dev
-# sudo apt build-dep emacs
+# sudo apt install lua5.4
+# sudo apt install luarocks
+# luarocks config lua_version 5.4
 
 ### System
 
