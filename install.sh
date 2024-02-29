@@ -7,6 +7,15 @@
 
 sudo apt update && sudo apt upgrade
 
+### Source
+
+# sudo apt install build-essential
+
+# Emacs (build)
+# shellcheck disable=SC2046
+# sudo apt install libgccjit-$(gcc -dumpversion)-dev
+# sudo apt install libtree-sitter-dev
+# sudo apt build-dep emacs
 
 ### Applications
 
