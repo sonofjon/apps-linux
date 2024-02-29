@@ -1,13 +1,16 @@
 #!/bin/bash
 
-### Add sources
+##### Setup
+
+# Edit sources
 # sudo vim /etc/apt/sources.list  # TODO: do this programatically
 
-### Update
-
+# Update
 sudo apt update && sudo apt upgrade
 
-### Source
+##### Install
+
+#### Source
 
 # sudo apt install build-essential
 
@@ -17,7 +20,7 @@ sudo apt update && sudo apt upgrade
 # sudo apt install libtree-sitter-dev
 # sudo apt build-dep emacs
 
-### Applications
+#### Applications
 
 ## Emacs
 
@@ -59,7 +62,7 @@ sudo apt install tree
 sudo apt install ocrmypdf
 sudo apt install tesseract-ocr-swe
 
-### Development
+#### Development
 
 # Node
 # sudo apt install npm
@@ -68,22 +71,35 @@ sudo apt install tesseract-ocr-swe
 # sudo apt install python3
 sudo apt install python3-pip
 
-## Linters
+### Linters
+
+## JSON
+
+# jsonlint
 sudo apt install python3-demjson
+
+## LaTex
+
+# chktex
 # sudo apt install chktex
 
+# texlab
 # sudo apt install cargo
 # cargo install --locked --git https://github.com/latex-lsp/texlab.git
 
+## Lua
+
+# luarocks
 # sudo apt install lua5.4
 # sudo apt install luarocks
 # luarocks config lua_version 5.4
 
-### System
 ## Python
 
 # black
 pip install black
+
+#### System
 
 ## General
 
