@@ -75,28 +75,24 @@ sudo apt install python3-pip
 
 ## JSON
 
-# jsonlint
 sudo apt install python3-demjson
 
 ## LaTex
 
-# chktex
 # sudo apt install chktex
 
-# texlab
 # sudo apt install cargo
 # cargo install --locked --git https://github.com/latex-lsp/texlab.git
 
 ## Lua
 
-# luarocks
 # sudo apt install lua5.4
 # sudo apt install luarocks
 # luarocks config lua_version 5.4
 
 ## Python
 
-# black
+# pip install autopep8
 pip install black
 
 #### System
