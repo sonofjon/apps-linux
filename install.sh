@@ -100,8 +100,7 @@ sudo apt install python3-demjson
 
 ## Python
 
-# pip install autopep8
-pip install black
+# See setup-pyhton repo
 
 #### System
 
