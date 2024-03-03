@@ -56,6 +56,8 @@ mv ./dasel $HOME/local/bin/dasel
 ## Other
 
 # sudo apt install ansible
+sudo apt install btop
+sudo apt install fzf
 sudo apt install gdu
 sudo apt install mmv
 sudo apt install ncdu
