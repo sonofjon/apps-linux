@@ -81,6 +81,10 @@ sudo apt install python3-pip
 
 ### Linters
 
+## Bash
+
+sudo apt install shellcheck
+
 ## JSON
 
 sudo apt install python3-demjson
