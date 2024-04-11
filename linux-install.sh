@@ -59,6 +59,7 @@ mv ./dasel $HOME/local/bin/dasel
 sudo apt install btop
 sudo apt install fzf
 sudo apt install gdu
+sudo apt install markdown
 sudo apt install mmv
 sudo apt install ncdu
 sudo apt install rename
