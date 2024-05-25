@@ -66,6 +66,7 @@ sudo apt install rename
 sudo apt install ripgrep
 # sudo apt install sshpass
 sudo apt install tree
+sudo apt install wakeonlan
 
 # ocrmypdf
 sudo apt install ocrmypdf
