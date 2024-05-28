@@ -109,6 +109,10 @@ sudo apt install python3-demjson
 
 # See setup-python repo
 
+## XML
+
+sudo apt install libxml2-utils   # xmllint
+
 #### System
 
 ## General
