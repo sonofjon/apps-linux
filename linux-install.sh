@@ -53,7 +53,7 @@ mv ./dasel $HOME/local/bin/dasel
 # sudo apt install texlive-luatex
 # tlmgr stuff
 
-## Other
+## Terminal utilities
 
 # sudo apt install ansible
 sudo apt install btop
@@ -71,6 +71,10 @@ sudo apt install wakeonlan
 # ocrmypdf
 sudo apt install ocrmypdf
 sudo apt install tesseract-ocr-swe
+
+## GUI tools
+
+# sudo apt install meld
 
 #### Development
 
