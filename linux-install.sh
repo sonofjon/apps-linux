@@ -1,137 +1,145 @@
 #!/bin/bash
 
-##### Setup
+# Detect the OS and set the package manager command
+if [ -f /etc/debian_version ]; then
+  echo "Detected Debian-based system (Ubuntu)"
+  PKG_MANAGER="apt"
+  sudo apt update && sudo apt upgrade
+elif [ -f /etc/fedora-release ]; then
+  echo "Detected Fedora-based system"
+  PKG_MANAGER="dnf"
+  sudo dnf upgrade
+else
+  echo "Unsupported OS"
+  exit 1
+fi
 
-# Edit sources
-# sudo vim /etc/apt/sources.list  # TODO: do this programatically
-
-# Update
-sudo apt update && sudo apt upgrade
-
-##### Install
-
-#### Source
-
-# sudo apt install build-essential
-
-# Emacs (build)
-# shellcheck disable=SC2046
-# sudo apt install libgccjit-$(gcc -dumpversion)-dev
-# sudo apt install libtree-sitter-dev
-# sudo apt build-dep emacs
-
-#### Applications
+### Applications
 
 ## Emacs
 
-# App
-sudo snap install emacs --classic
-
 # General
-sudo apt install xclip
+sudo $PKG_MANAGER install xclip
 
 # Spelling
-sudo apt install aspell aspell-en aspell-sv
-sudo apt install hunspell hunspell-sv
-sudo apt install wamerican
-sudo apt install wslu
+sudo $PKG_MANAGER install aspell aspell-en aspell-sv
+sudo $PKG_MANAGER install hunspell hunspell-sv
+sudo $PKG_MANAGER install wamerican # no fedora package
+sudo $PKG_MANAGER install wslu # no fedora package
 
 # vterm
-sudo apt install cmake
-sudo apt install libvterm-dev
+sudo $PKG_MANAGER install cmake
+sudo $PKG_MANAGER install libvterm-dev # no fedora package
 
 # dasel (for emacs-pet)
-curl -sSLf "$(curl -sSLf https://api.github.com/repos/tomwright/dasel/releases/latest | grep browser_download_url | grep linux_amd64 | grep -v .gz | cut -d\" -f 4)" -L -o dasel && chmod +x dasel
-mv ./dasel $HOME/local/bin/dasel
+# curl -sSLf "$(curl -sSLf https://api.github.com/repos/tomwright/dasel/releases/latest | grep browser_download_url | grep linux_amd64 | grep -v .gz | cut -d\" -f 4)" -L -o dasel && chmod +x dasel
+# mv ./dasel $HOME/local/bin/dasel
 
 ## LaTeX
 
-# sudo apt install texlive-latex-recommended
-# sudo apt install texlive-latex-extra
-# sudo apt install texlive-fonts-extra
-# sudo apt install texlive-lang-european
-# sudo apt install texlive-luatex
+# sudo $PKG_MANAGER install texlive-latex-recommended
+# sudo $PKG_MANAGER install texlive-latex-extra
+# sudo $PKG_MANAGER install texlive-fonts-extra
+# sudo $PKG_MANAGER install texlive-lang-european
+# sudo $PKG_MANAGER install texlive-luatex
 # tlmgr stuff
 
 ## Terminal utilities
 
-# sudo apt install ansible
-sudo apt install bat
-sudo apt install btop
-sudo apt install fzf
-sudo apt install gdu
-sudo apt install markdown
-sudo apt install mmv
-sudo apt install ncdu
-sudo apt install rename
-sudo apt install ripgrep
-# sudo apt install sshpass
-sudo apt install tree
-sudo apt install wakeonlan
+# sudo $PKG_MANAGER install ansible
+sudo $PKG_MANAGER install bat
+sudo $PKG_MANAGER install btop
+sudo $PKG_MANAGER install fzf
+sudo $PKG_MANAGER install gdu # no fedora package
+sudo $PKG_MANAGER install markdown # no fedora package
+sudo $PKG_MANAGER install mmv
+sudo $PKG_MANAGER install ncdu
+sudo $PKG_MANAGER install rename # no fedora package
+sudo $PKG_MANAGER install ripgrep
+# sudo $PKG_MANAGER install sshpass
+sudo $PKG_MANAGER install tree
+sudo $PKG_MANAGER install wakeonlan # no fedora package
 
 # ocrmypdf
-sudo apt install ocrmypdf
-sudo apt install tesseract-ocr-swe
+sudo $PKG_MANAGER install ocrmypdf
+sudo $PKG_MANAGER install tesseract-ocr-swe # no fedora package
 
 ## GUI tools
 
-# sudo apt install meld
+# sudo $PKG_MANAGER install meld
 
-#### Development
+### Development
 
-# Node
-# sudo apt install npm
-
-# Python
-# sudo apt install python3
-sudo apt install python3-pip
-sudo apt install python3-venv
-
-### Linters
-
-## Bash
-
-sudo apt install shellcheck
-
-## JSON
-
-sudo apt install python3-demjson
-
-## LaTex
-
-# sudo apt install chktex
-
-# sudo apt install cargo
-# cargo install --locked --git https://github.com/latex-lsp/texlab.git
-
-## Lua
-
-# sudo apt install lua5.4
-# sudo apt install luarocks
-# luarocks config lua_version 5.4
+## Node
+# sudo $PKG_MANAGER install npm
 
 ## Python
+# sudo $PKG_MANAGER install python3
+sudo $PKG_MANAGER install python3-pip
+sudo $PKG_MANAGER install python3-venv # no fedora package
 
-# See setup-python repo
+## Linters
 
-## XML
+# Bash
 
-sudo apt install libxml2-utils   # xmllint
+sudo $PKG_MANAGER install shellcheck
 
-#### System
+# JSON
+
+sudo $PKG_MANAGER install python3-demjson
+
+# LaTex
+
+# sudo $PKG_MANAGER install chktex
+
+# sudo $PKG_MANAGER install cargo
+# cargo install --locked --git https://github.com/latex-lsp/texlab.git
+
+# Lua
+
+# sudo $PKG_MANAGER install lua5.4
+# sudo $PKG_MANAGER install luarocks
+# luarocks config lua_version 5.4
+
+# Python
+#   See setup-python repo
+
+# XML
+
+sudo $PKG_MANAGER install libxml2-utils   # xmllint # no fedora package
+
+### System
 
 ## General
 
-sudo apt install apt-file
-sudo apt-file update
-
-sudo apt install plocate
-# sudo apt install anacron
-# sudo apt install sqlite3
+sudo $PKG_MANAGER install plocate
+# sudo $PKG_MANAGER install anacron
+# sudo $PKG_MANAGER install sqlite3
 
 ## Networking
 
-sudo apt install nmap
-# sudo apt install net-tools   # arp, ifconfig, netstat, rarp, nameif and route
-sudo apt install traceroute
-# sudo apt install inetutils-traceroute
+sudo $PKG_MANAGER install nmap
+# sudo $PKG_MANAGER install net-tools   # arp, ifconfig, netstat, rarp, nameif and route
+sudo $PKG_MANAGER install traceroute
+# sudo $PKG_MANAGER install inetutils-traceroute
+
+### Distro specific
+
+## Ubuntu
+
+if [ -f /etc/debian_version ]; then
+    sudo apt install apt-file
+    sudo apt-file update
+
+    # sudo apt install build-essential
+
+    # Emacs (build)
+    # shellcheck disable=SC2046
+    # sudo apt install libgccjit-$(gcc -dumpversion)-dev
+    # sudo apt install libtree-sitter-dev
+    # sudo apt build-dep emacs
+
+    # App
+    sudo snap install emacs --classic
+fi
+
