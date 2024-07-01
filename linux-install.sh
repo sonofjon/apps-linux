@@ -63,8 +63,6 @@ PKG_MAP=(
     [shellcheck]="shellcheck"    # Bash
     [python3-demjson]="python3-demjson"   # JSON
     # [chktex]="chktex"   # LaTex  ????
-    # sudo $pkg_manager install cargo
-    # cargo install --locked --git https://github.com/latex-lsp/texlab.git
     [lua5.4]="apt:lua5.4"      # Lua
     [luarocks]="luarocks"      # luarocks config lua_version 5.4
     [python3-demjson]="python3-demjson"
@@ -105,9 +103,15 @@ install_packages() {
 
 install_packages
 
+### Unpackaged 
+
 # dasel (for emacs-pet)
 # curl -sSLf "$(curl -sSLf https://api.github.com/repos/tomwright/dasel/releases/latest | grep browser_download_url | grep linux_amd64 | grep -v .gz | cut -d\" -f 4)" -L -o dasel && chmod +x dasel
 # mv ./dasel $HOME/local/bin/dasel
+
+# texlab (LaTex linter)
+# sudo $pkg_manager install cargo
+# cargo install --locked --git https://github.com/latex-lsp/texlab.git
 
 ### Distro specific
 
