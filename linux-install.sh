@@ -9,6 +9,7 @@ elif [ -f /etc/fedora-release ] || [ -L /etc/fedora-release ] ; then
   echo "Detected Fedora-based system"
   pkg_manager="dnf"
   sudo dnf upgrade
+  sudo dnf copr enable faramirza/gdu
 else
   echo "Unsupported OS"
   exit 1
@@ -40,7 +41,7 @@ PKG_MAP=(
     [bat]="bat"
     [btop]="btop"
     [fzf]="fzf"
-    [gdu]="gdu"
+    [gdu]="gdu"                                 # fedora: copr faramirza/gdu
     [markdown]="deb:markdown rpm:perl-Text-Markdown"
     [mmv]="mmv"
     [ncdu]="ncdu"
