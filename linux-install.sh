@@ -20,7 +20,35 @@ fi
 
 declare -A PKG_MAP
 PKG_MAP=(
-    # Emacs
+    # System:
+    [plocate]="plocate"
+    # [anacron]="anacron"
+    # [sqlite3]="sqlite3"
+    # Networking:
+    # [nmap]="nmap"
+    # [net-tools]="net-tools"                   # arp, ifconfig, netstat, rarp,
+                                                # nameif and route
+    [traceroute]="traceroute"
+    # [traceroute]="inetutils-traceroute"
+    # Utilities:
+    # [ansible]="ansible"
+    [bat]="bat"
+    [btop]="btop"
+    [fzf]="fzf"
+    [gdu]="gdu"                                 # fedora: copr faramirza/gdu
+    [markdown]="deb:markdown rpm:perl-Text-Markdown"
+    [mmv]="mmv"
+    [ncdu]="ncdu"
+    [rename]="deb:rename rpm:prename"
+    [ripgrep]="ripgrep"
+    # [sshpass]="sshpass"
+    [wakeonlan]="deb:wakeonlan rpm:wol"
+    # OCR:
+    [ocrmypdf]="ocrmypdf"
+    [tesseract]="deb:tesseract-ocr-swe rpm:tesseract-langpack-swe"
+    # GUI tools:
+    # [meld]="meld"
+    # Emacs:
     [emacs]="rpm:emacs"                         # ubuntu: see distro specific
     # [xclip]="xclip"                           # X11
     [wl-clipboard]="wl-clipboard"               # Wayland
@@ -41,24 +69,6 @@ PKG_MAP=(
     # [texlive-fonts-extra]="deb:texlive-fonts-extra"
     # [texlive-lang-european]="deb:texlive-lang-european"
     # [texlive-luatex]="deb:texlive-luatex"
-    # Utilities:
-    # [ansible]="ansible"
-    [bat]="bat"
-    [btop]="btop"
-    [fzf]="fzf"
-    [gdu]="gdu"                                 # fedora: copr faramirza/gdu
-    [markdown]="deb:markdown rpm:perl-Text-Markdown"
-    [mmv]="mmv"
-    [ncdu]="ncdu"
-    [rename]="deb:rename rpm:prename"
-    [ripgrep]="ripgrep"
-    # [sshpass]="sshpass"
-    [wakeonlan]="deb:wakeonlan rpm:wol"
-    # ocrmypdf:
-    [ocrmypdf]="ocrmypdf"
-    [tesseract]="deb:tesseract-ocr-swe rpm:tesseract-langpack-swe"
-    # GUI tools:
-    # [meld]="meld"
     # Development - Node:
     # [npm]="deb:npm rpm:nodejs.npm"
     # Development - Python:
@@ -71,16 +81,6 @@ PKG_MAP=(
     # [lua5.4]="deb:lua5.4"                     # Lua
     [luarocks]="luarocks"   # ubuntu: luarocks config lua_version 5.4
     [libxml2]="deb:libxml2-utils rpm:libxml2"   # XML
-    # System:
-    [plocate]="plocate"
-    # [anacron]="anacron"
-    # [sqlite3]="sqlite3"
-    # Networking:
-    # [nmap]="nmap"
-    # [net-tools]="net-tools"                   # arp, ifconfig, netstat, rarp,
-                                                # nameif and route
-    [traceroute]="traceroute"
-    # [traceroute]="inetutils-traceroute"
 )
 
 install_packages() {
