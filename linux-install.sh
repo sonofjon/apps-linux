@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Detect the OS and set the package manager command
+### Setup
+
 if [ -f /etc/debian_version ]; then
-  echo "Detected Debian-based system (Ubuntu)"
+  echo "Detected Debian-based system"
   pkg_manager="apt"
   sudo apt update && sudo apt upgrade
 elif [ -f /etc/fedora-release ] || [ -L /etc/fedora-release ] ; then
@@ -15,19 +16,23 @@ else
   exit 1
 fi
 
+### Packages
+
 declare -A PKG_MAP
 PKG_MAP=(
-    # Emacs - general:
-    [xclip]="xclip"
+    # Emacs
+    [emacs]="rpm:emacs"                         # ubuntu: see distro specific
+    # [xclip]="xclip"                           # X11
+    [wl-clipboard]="wl-clipboard"               # Wayland
+    [wslu]="deb:wslu"                           # WSL only
     # Emacs - spelling:
     [aspell]="aspell"
     [aspell-en]="aspell-en"
     [aspell-sv]="aspell-sv"
     [hunspell]="hunspell"
     [hunspell-sv]="hunspell-sv"
-    [wamerican]="deb:wamerican rpm:words"
+    [dictionary]="deb:wamerican rpm:words"
     # Emacs - vterm:
-    [wslu]="deb:wslu"  # no fedora package
     [cmake]="cmake"
     [libvterm]="deb:libvterm-dev rpm:libvterm-devel"
     # LaTeX:
@@ -58,23 +63,22 @@ PKG_MAP=(
     # [npm]="deb:npm rpm:nodejs.npm"
     # Development - Python:
     [python3-pip]="python3-pip"
-    [python3-venv]="deb:python3-venv"
+    [python3-venv]="deb:python3-venv"           # fedora: already installed
     # Linters:
-    [shellcheck]="shellcheck"    # Bash
-    [python3-demjson]="python3-demjson"   # JSON
-    # [chktex]="chktex"   # LaTex  ????
-    [lua5.4]="apt:lua5.4"      # Lua
-    [luarocks]="luarocks"      # luarocks config lua_version 5.4
-    [python3-demjson]="python3-demjson"
-    [shellcheck]="shellcheck"
-    [libxml2]="deb:libxml2-utils rpm:libxml2"
+    [shellcheck]="shellcheck"                   # Bash
+    [python3-demjson]="python3-demjson"         # JSON
+    # [chktex]="chktex"                         # LaTex
+    # [lua5.4]="deb:lua5.4"                     # Lua
+    [luarocks]="luarocks"   # ubuntu: luarocks config lua_version 5.4
+    [libxml2]="deb:libxml2-utils rpm:libxml2"   # XML
     # System:
     [plocate]="plocate"
     # [anacron]="anacron"
     # [sqlite3]="sqlite3"
     # Networking:
     # [nmap]="nmap"
-    # [net-tools]="net-tools"  # arp, ifconfig, netstat, rarp, nameif and route
+    # [net-tools]="net-tools"                   # arp, ifconfig, netstat, rarp,
+                                                # nameif and route
     [traceroute]="traceroute"
     # [traceroute]="inetutils-traceroute"
 )
@@ -129,6 +133,6 @@ if [ -f /etc/debian_version ]; then
     # sudo apt install libtree-sitter-dev
     # sudo apt build-dep emacs
 
-    # App
+    # Snaps
     sudo snap install emacs --classic
 fi
