@@ -124,7 +124,7 @@ install_packages
 
 ## Ubuntu
 
-if [ -f /etc/debian_version ]; then
+if [ "$pkg_manager" = "apt" ]; then
     sudo apt install apt-file
     sudo apt-file update
 
