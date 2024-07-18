@@ -5,11 +5,14 @@
 if [ -f /etc/debian_version ]; then
   echo "Detected Debian-based system"
   pkg_manager="apt"
+  # Upgrade
   sudo apt update && sudo apt upgrade
 elif [ -f /etc/fedora-release ] || [ -L /etc/fedora-release ] ; then
   echo "Detected Fedora-based system"
   pkg_manager="dnf"
+  # Upgrade
   sudo dnf upgrade
+  # Repos
   sudo dnf copr enable faramirza/gdu
 else
   echo "Unsupported OS"
