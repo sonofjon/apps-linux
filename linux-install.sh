@@ -63,6 +63,7 @@ PKG_MAP=(
     [hunspell]="hunspell"
     [hunspell-sv]="hunspell-sv"
     [dictionary]="deb:wamerican rpm:words"
+    [libenchant]="deb:libenchant-dev rpm:enchant2-devel"
     # Emacs - vterm:
     [cmake]="cmake"
     [libvterm]="deb:libvterm-dev rpm:libvterm-devel"
