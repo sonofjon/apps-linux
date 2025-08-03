@@ -88,6 +88,7 @@ sudo apt install wakeonlan
 sudo apt install python3-pip
 sudo apt install python3-venv
 sudo apt install pipx
+# sudo apt install python3-argcomplete   # installed automatically on Ubuntu 24.04
 
 ### Linters
 
