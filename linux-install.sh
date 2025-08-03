@@ -64,6 +64,7 @@ sudo apt install gdu
 sudo apt install markdown
 sudo apt install mmv
 sudo apt install ncdu
+sudo apt install pkgconf
 sudo apt install rename
 sudo apt install ripgrep
 # sudo apt install sshpass
