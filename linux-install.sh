@@ -36,9 +36,16 @@ sudo apt install hunspell hunspell-sv
 sudo apt install wamerican
 sudo apt install wslu
 
+# jinx (enchant)
+sudo apt install libenchant-2-dev
+sudo apt install pkgconf
+
 # vterm
 sudo apt install cmake
 sudo apt install libvterm-dev
+
+# xclip (wl-copy)
+sudo apt install wl-clipboard
 
 # dasel (for emacs-pet)
 # curl -sSLf "$(curl -sSLf https://api.github.com/repos/tomwright/dasel/releases/latest | grep browser_download_url | grep linux_amd64 | grep -v .gz | cut -d\" -f 4)" -L -o dasel && chmod +x dasel
@@ -64,13 +71,11 @@ sudo apt install gdu
 sudo apt install markdown
 sudo apt install mmv
 sudo apt install ncdu
-sudo apt install pkgconf
 sudo apt install rename
 sudo apt install ripgrep
 # sudo apt install sshpass
 sudo apt install tree
 sudo apt install wakeonlan
-sudo apt install wl-clipboard
 
 # ocrmypdf
 # sudo apt install ocrmypdf
