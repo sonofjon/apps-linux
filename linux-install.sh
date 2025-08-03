@@ -70,6 +70,7 @@ sudo apt install ripgrep
 # sudo apt install sshpass
 sudo apt install tree
 sudo apt install wakeonlan
+sudo apt install wl-clipboard
 
 # ocrmypdf
 # sudo apt install ocrmypdf
