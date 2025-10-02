@@ -75,7 +75,7 @@ sudo apt install rename
 sudo apt install ripgrep
 # sudo apt install sshpass
 sudo apt install tree
-sudo apt install wakeonlan
+# sudo apt install wakeonlan
 
 # ocrmypdf
 # sudo apt install ocrmypdf
@@ -141,7 +141,7 @@ sudo apt install plocate
 
 ## Networking
 
-sudo apt install nmap
+# sudo apt install nmap
 # sudo apt install net-tools   # arp, ifconfig, netstat, rarp, nameif and route
-sudo apt install traceroute
+# sudo apt install traceroute
 # sudo apt install inetutils-traceroute
