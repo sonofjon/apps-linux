@@ -97,6 +97,17 @@ sudo apt install python3-venv
 sudo apt install pipx
 # sudo apt install python3-argcomplete   # installed automatically on Ubuntu 24.04
 
+### Language servers
+
+## LaTex
+
+# sudo apt install cargo
+# cargo install --locked --git https://github.com/latex-lsp/texlab.git
+
+## Markdown
+
+sudo snap install marksman
+
 ### Linters
 
 ## Bash
@@ -110,9 +121,6 @@ sudo apt install python3-demjson
 ## LaTex
 
 # sudo apt install chktex
-
-# sudo apt install cargo
-# cargo install --locked --git https://github.com/latex-lsp/texlab.git
 
 ## Lua
 
