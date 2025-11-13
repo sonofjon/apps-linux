@@ -84,6 +84,7 @@ sudo apt install tree
 ## GUI tools
 
 # sudo apt install meld
+# sudo snap install dbeaver-ce
 
 #### Development
 
