@@ -83,8 +83,9 @@ sudo apt install tree
 
 ## GUI tools
 
-# sudo apt install meld
 # sudo snap install dbeaver-ce
+# sudo apt install meld
+# sudo apt pinentry-gnome3   # only in WSL
 
 #### Development
 
