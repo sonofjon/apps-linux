@@ -34,7 +34,6 @@ sudo apt install xclip
 sudo apt install aspell aspell-en aspell-sv
 sudo apt install hunspell hunspell-sv
 sudo apt install wamerican
-sudo apt install wslu
 
 # jinx (enchant)
 sudo apt install libenchant-2-dev
