@@ -20,6 +20,10 @@ sudo apt update && sudo apt upgrade
 # sudo apt install libtree-sitter-dev
 # sudo apt build-dep emacs
 
+# lxml Python package
+sudo apt install libxml2-dev
+sudo apt install libxslt1-dev
+
 #### Applications
 
 ## Emacs
