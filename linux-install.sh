@@ -72,6 +72,7 @@ sudo apt install socat
 sudo apt install bat
 sudo apt install btop
 sudo apt install fzf
+# sudo apt install gh   # Install from https://cli.github.com/
 sudo apt install gdu
 # sudo apt install git-delta   # Download from https://github.com/dandavison/delta
 sudo apt install markdown
