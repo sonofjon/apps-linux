@@ -75,6 +75,7 @@ sudo apt install fzf
 # sudo apt install gh   # Install from https://cli.github.com/
 sudo apt install gdu
 # sudo apt install git-delta   # Download from https://github.com/dandavison/delta
+sudo apt install jq
 sudo apt install markdown
 sudo apt install mmv
 sudo apt install ncdu
